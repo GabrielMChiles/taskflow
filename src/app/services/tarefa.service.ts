@@ -100,4 +100,14 @@ export class TarefaService {
     }
     return false;
   }
+
+  alterarStatusConcluido(id: number): void {
+  const tarefa = this.buscarTarefaPorId(id);
+  if (tarefa) {
+    tarefa.concluida = !tarefa.concluida;
+    // Regra de negócio do PDF 
+    tarefa.dataConclusao = tarefa.concluida ? new Date() : undefined;
+  }
+}  
+
 }
