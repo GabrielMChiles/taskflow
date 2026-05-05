@@ -1,12 +1,11 @@
-
-<p-button label="Listar" (click)="navegarPara('/tarefa')" />
-<br>
-<p-button label="Cadastrar" (click)="navegarPara('/tarefa/cadastrar')" />
-<br>
-<p-button label="Dashboard" (click)="navegarPara('/dashboard')" />
-
-
-
 <p-toast></p-toast>
 
-<router-outlet />
+<div class="menu-navegacao">
+    <p-button label="Listar" (click)="navegarPara('/tarefa')" />
+    <p-button label="Cadastrar" (click)="navegarPara('/tarefa/cadastrar')" />
+    <p-button label="Dashboard" (click)="navegarPara('/dashboard')" />
+</div>
+
+<div class="conteudo-principal">
+    <router-outlet></router-outlet>
+</div>
